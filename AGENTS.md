@@ -54,6 +54,17 @@ Turn a requested item (e.g. `mekanism:metallurgic_infuser`) into a **source-grou
 - LuV components depend on further LuV motors; do not count only the direct listed motor.
 - Exact evidence and quantities: `examples/mekanism_metallurgic_infuser.md`.
 
+## Mandatory research log (every research run)
+
+Before beginning a new item investigation:
+1. Open `research-logs/README.md` and check related previous logs.
+2. Create a **new** log under `research-logs/YYYY-MM-DD_<namespace>_<item>_<agent-or-run>.md` based on `research-logs/TEMPLATE.md`. Do not overwrite another agent's log or the template.
+3. As you search, record **actual** queries, file paths, fixed-commit URLs, hits and misses, source-vs-inference status, recipe decisions, and explicit unresolved items. Do not claim searches you didn't execute.
+4. Close the log with status, next actionable steps, and a link to the final output under `examples/` (if created). Update `research-logs/README.md` index when practical; if multiple agents may edit it concurrently, save your unique log first to avoid conflicts.
+5. If repository write access is unavailable, provide the log as Markdown for an authorized maintainer to commit; never claim you saved it remotely if you could not.
+
+**A final recipe explanation in `examples/` is NOT a substitute for the chronological search log.** The log documents the reasoning path and dead ends, not just the final ingredients. If the user specifically requests a search history but not new recipe research, work in `research-logs/` only.
+
 ## Writing into this repo
 
 When documenting new results, add a `examples/<namespace>_<item>.md` with pinned permalinks and a short confidence table. Optionally add JSON using the shape of the existing example. Do not edit upstream repositories. Do not label copied upstream code as ours. Preserve uncertainty and provenance, even if this makes the result less impressive.
