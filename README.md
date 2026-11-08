@@ -37,6 +37,16 @@ Modpack側の recipeRemovals / KubeJS / datapack を先に確認し、
 - 鋼鉄ケーシングはさらにThermal機械フレームを要求し、機械フレームはThermal Sparkを要求。そこでBotaniaやBlood Magicを含む別経路へ依存が伸びる。
 - 詳細な出典・検証範囲・計算結果は [テスト記録](examples/mekanism_metallurgic_infuser.md) を参照。
 
+## 構造化テストの整合性チェック
+
+Python 3の標準ライブラリだけで、既知の依存部品数量と流体小計の計算を検算できます。
+
+```bash
+python scripts/validate_case.py examples/mekanism_metallurgic_infuser.json
+```
+
+このスクリプトは **公開ソースで導いた計算結果の内部整合性だけ** を検証します。GitHubの最新版照会、実ゲームのJEIやModpack設定の読み込みは行いません。JSON内の「Mod本体由来」は引き続き未照合扱いです。
+
 ## 参照ソース（再現性のため固定）
 
 | 対象 | 参照コミット | 用途 |
