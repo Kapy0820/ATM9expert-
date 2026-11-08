@@ -14,13 +14,14 @@ ATM9 Expertは依存関係が非常に深いため、**最初は直接素材だ�
 
 1. **[AGENTS.md](AGENTS.md)** — 調査時の必須ルール、検索順序、禁止事項、回答書式
 2. **[docs/RESEARCH_PROTOCOL.md](docs/RESEARCH_PROTOCOL.md)** — 公開ソースを使う再現可能な調査手順、数量計算、検証方法
-3. **[examples/mekanism_metallurgic_infuser.md](examples/mekanism_metallurgic_infuser.md)** — 実際に調査したMekanism「冶金吹込機」の例
-4. **[examples/mekanism_metallurgic_infuser.json](examples/mekanism_metallurgic_infuser.json)** — 上記テストの機械可読な記録
+3. **[research-logs/README.md](research-logs/README.md)** — 各AIエージェントの検索履歴、記録テンプレート、引き継ぎログ
+4. **[examples/mekanism_metallurgic_infuser.md](examples/mekanism_metallurgic_infuser.md)** — 実際に調査したMekanism「冶金吹込機」の例
+5. **[examples/mekanism_metallurgic_infuser.json](examples/mekanism_metallurgic_infuser.json)** — 上記テストの機械可読な記録
 
 ### 次のAIに与える依頼例
 
 ```text
-このリポジトリの AGENTS.md と docs/RESEARCH_PROTOCOL.md を先に読んでください。
+このリポジトリの AGENTS.md、docs/RESEARCH_PROTOCOL.md と research-logs/README.md を先に読んでください。
 ATM9 Expert の [アイテム名または item ID] を1個作る手順を公開ソースから調査してください。
 まず直接レシピを提示し、中間素材は深さ2まで展開してください。
 Modpack側の recipeRemovals / KubeJS / datapack を先に確認し、
@@ -28,6 +29,7 @@ Modpack側の recipeRemovals / KubeJS / datapack を先に確認し、
 各レシピは出典URL、参照コミット、根拠の確度、
 未確認点、必要な機械・流体・研究条件も記載してください。
 ゲーム内で検証していないものを「確定」と呼ばないでください。
+調査中に実際に行った検索と発見・失敗・判断を、research-logs/TEMPLATE.md に沿う新規ログに保存し、完了した成果物と相互リンクしてください。
 ```
 
 ## 調査した実例：冶金吹込機
