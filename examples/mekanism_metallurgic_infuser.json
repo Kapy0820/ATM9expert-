@@ -28,7 +28,7 @@
     "runtime_verified": false
   },
   "record_conventions": {
-    "inputs": "[form_or_id_or_tag, consumed_count]",
+    "inputs": "Pack entries use exact id/tag where visible; upstream Java MaterialEntry uses semantic prefix:Material forms, which must NOT be treated as registry IDs.",
     "fluids_mb": "[id_or_tag, amount_mB]",
     "caution": "Java MaterialEntry display forms do NOT prove exact generated registry IDs; all upstream inputs need version/tag resolution."
   },
@@ -265,27 +265,27 @@
       "duration_ticks": 600,
       "inputs": [
         [
-          "gtceu:long_magnetic_samarium_rod",
+          "rodLong:SamariumMagnetic",
           1
         ],
         [
-          "#gtceu:rods/long/hsss",
+          "rodLong:HSSS",
           2
         ],
         [
-          "#forge:rings/hsss",
+          "ring:HSSS",
           2
         ],
         [
-          "#forge:rounds/hsss",
+          "round:HSSS",
           4
         ],
         [
-          "#forge:fine_wires/ruridit",
+          "wireFine:Ruridit",
           64
         ],
         [
-          "#gtceu:cables/single/niobium_titanium",
+          "cableGtSingle:NiobiumTitanium",
           2
         ]
       ],
@@ -305,7 +305,7 @@
       },
       "nonconsumed": [],
       "evidence": "upstream_reference",
-      "note": "Input item IDs/tags shown are semantic approximations of Java MaterialEntry forms; compare actual generated IDs/tags before using for crafting."
+      "note": "All input strings are Java MaterialEntry forms, NOT proven literal item IDs or tags. Check generated assets and actual mod version before use."
     },
     {
       "key": "luv_pump",
@@ -484,6 +484,7 @@
     "Partial totals depend on using these specific GTCEu upstream recipes for the LuV components.",
     "Do not call this a complete raw-material shopping list.",
     "L = 144 mB in pinned upstream GTValues.java.",
-    "The pack recipes are confirmed in source; this does not establish actual JEI output in the user installation."
+    "The pack recipes are confirmed in source; this does not establish actual JEI output in the user installation.",
+    "Fluid totals group #forge:lubricant with gtceu:lubricant, and #forge:soldering_alloy with gtceu:soldering_alloy by named fluid family; actual tag membership remains unverified."
   ]
 }
