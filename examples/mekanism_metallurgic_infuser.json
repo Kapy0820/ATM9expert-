@@ -1,0 +1,489 @@
+{
+  "schema_version": "0.1-prototype",
+  "case_id": "mekanism_metallurgic_infuser",
+  "language": "ja",
+  "target": {
+    "id": "mekanism:metallurgic_infuser",
+    "count": 1
+  },
+  "source_revisions": {
+    "pack": {
+      "repo": "AllTheMods/atm9-expert",
+      "commit": "309d0fa357b00d855f3a50739ae64737f7537936"
+    },
+    "upstream_reference": {
+      "repo": "GregTechCEu/GregTech-Modern",
+      "commit": "e24b2387318d1b70a0d5d651dba56a1baa5f2a6c",
+      "branch": "1.20.1",
+      "version_parity_verified": false
+    }
+  },
+  "effective_recipe_status": {
+    "removal_in_pack": {
+      "repo": "AllTheMods/atm9-expert",
+      "commit": "309d0fa357b00d855f3a50739ae64737f7537936",
+      "path": "kubejs/server_scripts/recipeRemovals.js",
+      "url": "https://github.com/AllTheMods/atm9-expert/blob/309d0fa357b00d855f3a50739ae64737f7537936/kubejs/server_scripts/recipeRemovals.js#L515-L523"
+    },
+    "runtime_verified": false
+  },
+  "record_conventions": {
+    "inputs": "[form_or_id_or_tag, consumed_count]",
+    "fluids_mb": "[id_or_tag, amount_mB]",
+    "caution": "Java MaterialEntry display forms do NOT prove exact generated registry IDs; all upstream inputs need version/tag resolution."
+  },
+  "recipes": [
+    {
+      "key": "infuser",
+      "source": {
+        "repo": "AllTheMods/atm9-expert",
+        "commit": "309d0fa357b00d855f3a50739ae64737f7537936",
+        "path": "kubejs/server_scripts/Gregification/Machine_Recipes/AssemblyLine.js",
+        "url": "https://github.com/AllTheMods/atm9-expert/blob/309d0fa357b00d855f3a50739ae64737f7537936/kubejs/server_scripts/Gregification/Machine_Recipes/AssemblyLine.js#L746-L764"
+      },
+      "output": {
+        "id": "mekanism:metallurgic_infuser",
+        "count": 1
+      },
+      "machine": "gtceu:assembly_line",
+      "tier": "LuV",
+      "duration_ticks": 1000,
+      "inputs": [
+        [
+          "mekanism:steel_casing",
+          1
+        ],
+        [
+          "gtceu:luv_electric_pump",
+          2
+        ],
+        [
+          "gtceu:luv_electric_motor",
+          1
+        ],
+        [
+          "gtceu:luv_conveyor_module",
+          2
+        ],
+        [
+          "#gtceu:circuits/luv",
+          2
+        ],
+        [
+          "#forge:plates/hafnium",
+          4
+        ],
+        [
+          "gtceu:laminated_glass",
+          2
+        ]
+      ],
+      "fluids_mb": [
+        [
+          "gtceu:polytetrafluoroethylene",
+          144
+        ],
+        [
+          "#forge:lubricant",
+          1440
+        ],
+        [
+          "#forge:soldering_alloy",
+          1440
+        ]
+      ],
+      "research": {
+        "type": "none_specified_at_callsite"
+      },
+      "nonconsumed": [],
+      "evidence": "pack_source_confirmed"
+    },
+    {
+      "key": "steel_casing",
+      "source": {
+        "repo": "AllTheMods/atm9-expert",
+        "commit": "309d0fa357b00d855f3a50739ae64737f7537936",
+        "path": "kubejs/server_scripts/Gregification/Machine_Recipes/AssemblyLine.js",
+        "url": "https://github.com/AllTheMods/atm9-expert/blob/309d0fa357b00d855f3a50739ae64737f7537936/kubejs/server_scripts/Gregification/Machine_Recipes/AssemblyLine.js#L153-L173"
+      },
+      "output": {
+        "id": "mekanism:steel_casing",
+        "count": 1
+      },
+      "machine": "gtceu:assembly_line",
+      "tier": "LuV",
+      "duration_ticks": 100,
+      "inputs": [
+        [
+          "thermal:machine_frame",
+          1
+        ],
+        [
+          "#forge:plates/osmiridium",
+          4
+        ],
+        [
+          "#forge:plates/hafnium",
+          4
+        ],
+        [
+          "#forge:gears/plastic",
+          8
+        ],
+        [
+          "#forge:rods/hop_graphite",
+          2
+        ]
+      ],
+      "fluids_mb": [
+        [
+          "#forge:soldering_alloy",
+          288
+        ],
+        [
+          "#forge:lubricant",
+          288
+        ]
+      ],
+      "research": {
+        "type": "scanner",
+        "subject": "thermal:machine_frame"
+      },
+      "nonconsumed": [],
+      "evidence": "pack_source_confirmed"
+    },
+    {
+      "key": "thermal_frame",
+      "source": {
+        "repo": "AllTheMods/atm9-expert",
+        "commit": "309d0fa357b00d855f3a50739ae64737f7537936",
+        "path": "kubejs/server_scripts/Gregification/Machine_Recipes/assembler.js",
+        "url": "https://github.com/AllTheMods/atm9-expert/blob/309d0fa357b00d855f3a50739ae64737f7537936/kubejs/server_scripts/Gregification/Machine_Recipes/assembler.js#L722-L735"
+      },
+      "output": {
+        "id": "thermal:machine_frame",
+        "count": 1
+      },
+      "machine": "gtceu:assembler",
+      "tier": "IV",
+      "duration_ticks": 600,
+      "inputs": [
+        [
+          "gtceu:thermal_spark",
+          1
+        ],
+        [
+          "#forge:plates/tungsten_steel",
+          4
+        ],
+        [
+          "#forge:screws/terrasteel",
+          4
+        ],
+        [
+          "#forge:small_gears/plastic",
+          8
+        ],
+        [
+          "#gtceu:circuits/iv",
+          2
+        ],
+        [
+          "gtceu:iv_electric_piston",
+          2
+        ]
+      ],
+      "fluids_mb": [
+        [
+          "gtceu:polytetrafluoroethylene",
+          144
+        ]
+      ],
+      "research": {
+        "type": "none_specified_at_callsite"
+      },
+      "nonconsumed": [],
+      "evidence": "pack_source_confirmed"
+    },
+    {
+      "key": "thermal_spark",
+      "source": {
+        "repo": "AllTheMods/atm9-expert",
+        "commit": "309d0fa357b00d855f3a50739ae64737f7537936",
+        "path": "kubejs/server_scripts/Gregification/CustomMultiblocks/Sanguine_Synthesizer.js",
+        "url": "https://github.com/AllTheMods/atm9-expert/blob/309d0fa357b00d855f3a50739ae64737f7537936/kubejs/server_scripts/Gregification/CustomMultiblocks/Sanguine_Synthesizer.js#L34-L43"
+      },
+      "output": {
+        "id": "gtceu:thermal_spark",
+        "count": 1
+      },
+      "machine": "gtceu:sanguine_alchemy",
+      "tier": "LuV",
+      "duration_ticks": 1000,
+      "inputs": [
+        [
+          "botania:corporea_spark",
+          1
+        ],
+        [
+          "#forge:exquisite_gems/nitro_crystal",
+          1
+        ],
+        [
+          "#forge:rounds/pink_slime",
+          4
+        ],
+        [
+          "#forge:rings/draconium_awakened",
+          1
+        ]
+      ],
+      "fluids_mb": [],
+      "research": {
+        "type": "unknown"
+      },
+      "nonconsumed": [
+        "gtceu:technomancy_orb"
+      ],
+      "evidence": "pack_source_confirmed"
+    },
+    {
+      "key": "luv_motor",
+      "source": {
+        "repo": "GregTechCEu/GregTech-Modern",
+        "commit": "e24b2387318d1b70a0d5d651dba56a1baa5f2a6c",
+        "path": "src/main/java/com/gregtechceu/gtceu/data/recipe/misc/ComponentRecipes.java",
+        "url": "https://github.com/GregTechCEu/GregTech-Modern/blob/e24b2387318d1b70a0d5d651dba56a1baa5f2a6c/src/main/java/com/gregtechceu/gtceu/data/recipe/misc/ComponentRecipes.java#L102-L117"
+      },
+      "output": {
+        "id": "gtceu:luv_electric_motor",
+        "count": 1
+      },
+      "machine": "gtceu:assembly_line",
+      "tier": "LuV",
+      "eut_numeric": 6000,
+      "duration_ticks": 600,
+      "inputs": [
+        [
+          "gtceu:long_magnetic_samarium_rod",
+          1
+        ],
+        [
+          "#gtceu:rods/long/hsss",
+          2
+        ],
+        [
+          "#forge:rings/hsss",
+          2
+        ],
+        [
+          "#forge:rounds/hsss",
+          4
+        ],
+        [
+          "#forge:fine_wires/ruridit",
+          64
+        ],
+        [
+          "#gtceu:cables/single/niobium_titanium",
+          2
+        ]
+      ],
+      "fluids_mb": [
+        [
+          "gtceu:soldering_alloy",
+          144
+        ],
+        [
+          "gtceu:lubricant",
+          250
+        ]
+      ],
+      "research": {
+        "type": "scanner",
+        "subject": "gtceu:iv_electric_motor"
+      },
+      "nonconsumed": [],
+      "evidence": "upstream_reference",
+      "note": "Input item IDs/tags shown are semantic approximations of Java MaterialEntry forms; compare actual generated IDs/tags before using for crafting."
+    },
+    {
+      "key": "luv_pump",
+      "source": {
+        "repo": "GregTechCEu/GregTech-Modern",
+        "commit": "e24b2387318d1b70a0d5d651dba56a1baa5f2a6c",
+        "path": "src/main/java/com/gregtechceu/gtceu/data/recipe/misc/ComponentRecipes.java",
+        "url": "https://github.com/GregTechCEu/GregTech-Modern/blob/e24b2387318d1b70a0d5d651dba56a1baa5f2a6c/src/main/java/com/gregtechceu/gtceu/data/recipe/misc/ComponentRecipes.java#L367-L386"
+      },
+      "output": {
+        "id": "gtceu:luv_electric_pump",
+        "count": 1
+      },
+      "machine": "gtceu:assembly_line",
+      "tier": "LuV",
+      "eut_numeric": 6000,
+      "duration_ticks": 600,
+      "inputs": [
+        [
+          "gtceu:luv_electric_motor",
+          1
+        ],
+        [
+          "pipeSmallFluid:NiobiumTitanium",
+          1
+        ],
+        [
+          "plate:HSSS",
+          2
+        ],
+        [
+          "screw:HSSS",
+          8
+        ],
+        [
+          "ring:SiliconeRubber",
+          4
+        ],
+        [
+          "rotor:HSSS",
+          1
+        ],
+        [
+          "cableGtSingle:NiobiumTitanium",
+          2
+        ]
+      ],
+      "fluids_mb": [
+        [
+          "gtceu:soldering_alloy",
+          144
+        ],
+        [
+          "gtceu:lubricant",
+          250
+        ]
+      ],
+      "research": {
+        "type": "scanner",
+        "subject": "gtceu:iv_electric_pump"
+      },
+      "nonconsumed": [],
+      "evidence": "upstream_reference",
+      "note": "Java MaterialEntry symbols kept as forms; they are not literal IDs."
+    },
+    {
+      "key": "luv_conveyor",
+      "source": {
+        "repo": "GregTechCEu/GregTech-Modern",
+        "commit": "e24b2387318d1b70a0d5d651dba56a1baa5f2a6c",
+        "path": "src/main/java/com/gregtechceu/gtceu/data/recipe/misc/ComponentRecipes.java",
+        "url": "https://github.com/GregTechCEu/GregTech-Modern/blob/e24b2387318d1b70a0d5d651dba56a1baa5f2a6c/src/main/java/com/gregtechceu/gtceu/data/recipe/misc/ComponentRecipes.java#L312-L334"
+      },
+      "output": {
+        "id": "gtceu:luv_conveyor_module",
+        "count": 1
+      },
+      "machine": "gtceu:assembly_line",
+      "tier": "LuV",
+      "eut_numeric": 6000,
+      "duration_ticks": 600,
+      "inputs": [
+        [
+          "gtceu:luv_electric_motor",
+          2
+        ],
+        [
+          "plate:HSSS",
+          2
+        ],
+        [
+          "ring:HSSS",
+          4
+        ],
+        [
+          "round:HSSS",
+          16
+        ],
+        [
+          "screw:HSSS",
+          4
+        ],
+        [
+          "cableGtSingle:NiobiumTitanium",
+          2
+        ]
+      ],
+      "fluids_mb": [
+        [
+          "gtceu:soldering_alloy",
+          144
+        ],
+        [
+          "gtceu:lubricant",
+          250
+        ],
+        [
+          "gtceu:styrene_butadiene_rubber",
+          1152
+        ]
+      ],
+      "research": {
+        "type": "scanner",
+        "subject": "gtceu:iv_conveyor_module"
+      },
+      "nonconsumed": [],
+      "evidence": "upstream_reference",
+      "note": "Java MaterialEntry symbols kept as forms; they are not literal IDs."
+    }
+  ],
+  "chosen_expansion": {
+    "production_counts": {
+      "infuser": 1,
+      "steel_casing": 1,
+      "thermal_frame": 1,
+      "thermal_spark": 1,
+      "luv_motor": 7,
+      "luv_pump": 2,
+      "luv_conveyor": 2
+    },
+    "derived": {
+      "luv_motors": {
+        "direct": 1,
+        "pumps": 2,
+        "conveyors": 4,
+        "total": 7
+      }
+    },
+    "partial_consumed_fluid_totals_mb": {
+      "soldering_alloy": 3312,
+      "lubricant": 4478,
+      "polytetrafluoroethylene": 288,
+      "styrene_butadiene_rubber": 2304
+    },
+    "inclusions": [
+      "infuser",
+      "steel_casing",
+      "thermal_frame",
+      "luv_motor",
+      "luv_pump",
+      "luv_conveyor"
+    ],
+    "exclusions": [
+      "fluid manufacture",
+      "research material costs",
+      "crafting machines and multiblock construction",
+      "thermal spark subingredients and catalyst creation",
+      "IV electric piston ingredients",
+      "circuit choice and manufacture",
+      "raw ore to alloy processing",
+      "tag resolution",
+      "runtime verification"
+    ]
+  },
+  "notes": [
+    "Partial totals depend on using these specific GTCEu upstream recipes for the LuV components.",
+    "Do not call this a complete raw-material shopping list.",
+    "L = 144 mB in pinned upstream GTValues.java.",
+    "The pack recipes are confirmed in source; this does not establish actual JEI output in the user installation."
+  ]
+}
